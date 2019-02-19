@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:AggregatorXamarin.Views.Profile"
+       xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+       xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+       xmlns:local1="clr-namespace:MapsExample"
+       NavigationPage.BackButtonTitle=""
+       x:Class="MapsExample.AppShell">
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="SecondaryShell" TargetType="Element">
+                <Setter Property="Shell.ShellBackgroundColor" Value="White" />
+                <Setter Property="Shell.ShellTitleColor" Value="Black" />
+                <Setter Property="Shell.ShellForegroundColor" Value="Gray" />
+            </Style>
+        </ResourceDictionary>
+    </Shell.Resources>
+
+
+
+
+    <ShellItem NavigationPage.BackButtonTitle="1" FlyoutIcon="iconXamarin.png" Title="Личный кабинет" Style="{StaticResource SecondaryShell}">
+        <ShellSection>
+            <ShellContent Route="home">
+                <local1:PageMap/>
+            </ShellContent>
+        </ShellSection>
+    </ShellItem>
+</Shell>
